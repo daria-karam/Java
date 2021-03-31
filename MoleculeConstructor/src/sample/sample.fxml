@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="550.0" maxWidth="600.0" minHeight="550.0" minWidth="600.0" onKeyPressed="#handle" onMouseClicked="#handle" prefHeight="550.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox prefHeight="35.0" prefWidth="600.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="587.0" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                     <MenuItem fx:id="save" mnemonicParsing="false" accelerator="Ctrl+S" text="Save to file" onAction="#clickSave" />
+                     <MenuItem fx:id="load" mnemonicParsing="false" accelerator="Ctrl+O" text="Load from file" onAction="#clickLoad" />
+                  </items>
+                </Menu>
+                 <Menu mnemonicParsing="false" text="Data">
+                    <MenuItem mnemonicParsing="false" text="Clear all data" onAction="#removeAllData" />
+                 </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+      <Rectangle fx:id="H" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="25.0" onMouseClicked="#choiceH" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="N" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="100.0" onMouseClicked="#choiceN" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="C" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="175.0" onMouseClicked="#choiceC" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="O" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="250.0" onMouseClicked="#choiceO" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="connection" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="325.0" onMouseClicked="#choiceConnection" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="radical" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="400.0" onMouseClicked="#choiceRadical" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="remove" arcHeight="5.0" arcWidth="5.0" fill="POWDERBLUE" height="75.0" layoutX="500.0" layoutY="475.0" onMouseClicked="#choiceRemove" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+      <Circle fill="#1ff6ff" layoutX="525.0" layoutY="63.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceH" radius="12.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff70bc" layoutX="525.0" layoutY="138.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceN" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#f59e41" layoutX="525.0" layoutY="213.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceC" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#3e4efc" layoutX="525.0" layoutY="288.0" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#choiceO" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="-67.0" layoutX="608.0" layoutY="362.0" onMouseClicked="#choiceConnection" startX="-100.0" strokeWidth="3.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="32.0" layoutX="509.0" layoutY="422.0" onMouseClicked="#choiceRadical" stroke="#ff0e0e" strokeType="INSIDE" width="32.0" />
+      <Label layoutX="517.0" layoutY="421.0" onMouseClicked="#choiceRadical" text="R">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="46.0" onMouseClicked="#choiceH" text="H">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="549.0" layoutY="121.0" onMouseClicked="#choiceN" text="N">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="195.0" onMouseClicked="#choiceC" text="C">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="271.0" onMouseClicked="#choiceO" text="O">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="502.0" layoutY="475.0" onMouseClicked="#choiceRemove" prefHeight="75.0" prefWidth="100.0" text="Remove atom or radical" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
